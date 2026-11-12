@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\AIStudyRecommendation;
 use App\Models\SchoolSchedule;
 use App\Models\User;
+use App\Notifications\AIStudyNotification;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
@@ -135,7 +136,7 @@ class AIStudyRecommendationService
     }
 
     /**
-     * Tạo một đề xuất học tập.
+     * Tạo một đề xuất học tập và gửi thông báo nếu tạo thành công.
      */
     protected function createRecommendation(
         User $user,
@@ -162,12 +163,18 @@ class AIStudyRecommendationService
             return null;
         }
 
+        /*
+         * Xác định thời gian học.
+         */
         $startTime = $this->getRecommendedStartTime($user);
 
         $duration = $this->getRecommendedDuration($user);
 
         $endTime = $startTime->copy()->addMinutes($duration);
 
+        /*
+         * Xây dựng nội dung cá nhân hóa.
+         */
         $learningGoal = $this->buildLearningGoal(
             $schedule,
             $personalization
@@ -178,7 +185,10 @@ class AIStudyRecommendationService
             $personalization
         );
 
-        return AIStudyRecommendation::create([
+        /*
+         * Tạo đề xuất học tập.
+         */
+        $recommendation = AIStudyRecommendation::create([
             'user_id' => $user->id,
 
             'school_schedule_id' => $schedule->id,
@@ -206,6 +216,29 @@ class AIStudyRecommendationService
 
             'status' => 'pending',
         ]);
+
+        /*
+         * Gửi thông báo khi đề xuất mới được tạo thành công.
+         */
+        $user->notify(new AIStudyNotification(
+            'Có đề xuất học tập mới',
+
+            'AIStudy vừa tạo đề xuất ôn tập môn '
+                . $schedule->subject_name
+                . ' vào ngày '
+                . $studyDate->format('d/m/Y')
+                . ', thời gian từ '
+                . $startTime->format('H:i')
+                . ' đến '
+                . $endTime->format('H:i')
+                . '.',
+
+            'recommendation',
+
+            route('recommendations.index')
+        ));
+
+        return $recommendation;
     }
 
     /**

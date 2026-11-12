@@ -1885,5 +1885,694 @@ a {
         width: 100%;
         justify-content: center;
     }
+}
+    /* ==========================================
+   AIStudy DARK MODE
+========================================== */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --background: #111827;
+    --card: #1f2937;
+
+    --text: #f3f4f6;
+    --muted: #a1a1b5;
+
+    --border: #374151;
+
+    --primary-light: #312e55;
+    --green-light: #153c30;
+    --blue-light: #1e3555;
+    --orange-light: #49371b;
+}
+
+html[data-theme="dark"] body {
+    background: var(--background);
+    color: var(--text);
+}
+
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .top-header,
+html[data-theme="dark"] .dashboard-page .dashboard-section,
+html[data-theme="dark"] .dashboard-page .dashboard-stat-card,
+html[data-theme="dark"] .dashboard-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .profile-card,
+html[data-theme="dark"] .auth-card {
+    background: var(--card);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .menu-item,
+html[data-theme="dark"] .sidebar-item,
+html[data-theme="dark"] .sidebar-user-info,
+html[data-theme="dark"] .header-user {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .menu-item:hover,
+html[data-theme="dark"] .menu-item.active {
+    background: #312e55;
+    color: #b8adff;
+}
+
+html[data-theme="dark"] .search-box,
+html[data-theme="dark"] .header-button,
+html[data-theme="dark"] .search-shortcut,
+html[data-theme="dark"] .select-button {
+    background: #111827;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .search-box input {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .dashboard-page {
+    --dash-text: #f3f4f6;
+    --dash-muted: #a1a1b5;
+    --dash-border: #374151;
+    --dash-surface: #1f2937;
+    --dash-bg: #111827;
+}
+
+html[data-theme="dark"] .dashboard-page .dashboard-empty,
+html[data-theme="dark"] .profile-user,
+html[data-theme="dark"] .insight-box {
+    background: #111827;
+    color: var(--muted);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select {
+    background: #111827;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .dashboard-page .dashboard-schedule-item,
+html[data-theme="dark"] .recommendation,
+html[data-theme="dark"] .task,
+html[data-theme="dark"] .insight-item {
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .dashboard-page .dashboard-schedule-time,
+html[data-theme="dark"] .dashboard-page .dashboard-secondary-btn {
+    background: #312e55;
+    color: #c4baff;
+    border-color: #51468b;
+}
+
+html[data-theme="dark"] .dashboard-page .dashboard-stat-card::after {
+    opacity: .12;
+}
+
+html[data-theme="dark"] .logo-text strong,
+html[data-theme="dark"] .dashboard-page .dashboard-heading,
+html[data-theme="dark"] .dashboard-page .dashboard-stat-title,
+html[data-theme="dark"] .dashboard-page .dashboard-schedule-name,
+html[data-theme="dark"] .profile-header h1,
+html[data-theme="dark"] .profile-card h2 {
+    color: var(--text);
+}
+
+/* ==========================================
+   AISTUDY - DARK MODE
+========================================== */
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --background: #111827;
+    --card: #1f2937;
+
+    --text: #f3f4f6;
+    --muted: #a1a1b5;
+
+    --border: #374151;
+
+    --primary-light: #312e55;
+    --green-light: #153c30;
+    --blue-light: #1e3555;
+    --orange-light: #49371b;
+}
+
+/* Nền tổng thể */
+:root[data-theme="dark"] body {
+    background: var(--background);
+    color: var(--text);
+}
+
+/* Sidebar và Header */
+:root[data-theme="dark"] .sidebar,
+:root[data-theme="dark"] .top-header {
+    background: var(--card);
+    border-color: var(--border);
+}
+
+/* Các loại Card */
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .dashboard-card,
+:root[data-theme="dark"] .profile-card,
+:root[data-theme="dark"] .auth-card {
+    background: var(--card);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+/* Chữ */
+:root[data-theme="dark"] .logo-text strong,
+:root[data-theme="dark"] .header-user strong,
+:root[data-theme="dark"] .user-info strong,
+:root[data-theme="dark"] .welcome-section h1,
+:root[data-theme="dark"] .card-header h3,
+:root[data-theme="dark"] .stat-card h2,
+:root[data-theme="dark"] .task-info strong,
+:root[data-theme="dark"] .profile-header h1,
+:root[data-theme="dark"] .profile-card h2,
+:root[data-theme="dark"] .profile-user h3 {
+    color: var(--text);
+}
+
+/* Chữ phụ */
+:root[data-theme="dark"] .menu-item,
+:root[data-theme="dark"] .header-user span,
+:root[data-theme="dark"] .user-info span,
+:root[data-theme="dark"] .welcome-description,
+:root[data-theme="dark"] .card-header p,
+:root[data-theme="dark"] .stat-label,
+:root[data-theme="dark"] .recommendation-content p,
+:root[data-theme="dark"] .task-info span,
+:root[data-theme="dark"] .profile-header p,
+:root[data-theme="dark"] .profile-card p,
+:root[data-theme="dark"] .profile-card small {
+    color: var(--muted);
+}
+
+/* Menu */
+:root[data-theme="dark"] .menu-item:hover,
+:root[data-theme="dark"] .menu-item.active {
+    background: #312e55;
+    color: #c4baff;
+}
+
+/* Search và nút Header */
+:root[data-theme="dark"] .search-box,
+:root[data-theme="dark"] .search-shortcut,
+:root[data-theme="dark"] .header-button,
+:root[data-theme="dark"] .select-button {
+    background: #111827;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+:root[data-theme="dark"] .search-box input {
+    color: var(--text);
+}
+
+:root[data-theme="dark"] .search-box input::placeholder {
+    color: var(--muted);
+}
+
+/* Form */
+:root[data-theme="dark"] .form-group input,
+:root[data-theme="dark"] .form-group select,
+:root[data-theme="dark"] .form-control,
+:root[data-theme="dark"] .form-select,
+:root[data-theme="dark"] textarea {
+    background: #111827;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+:root[data-theme="dark"] .form-group input:disabled {
+    background: #374151;
+    color: var(--muted);
+}
+
+/* Profile */
+:root[data-theme="dark"] .profile-user {
+    background: #111827;
+    border-color: var(--border);
+}
+
+/* Các khối thông tin */
+:root[data-theme="dark"] .insight-box,
+:root[data-theme="dark"] .recommendation-icon,
+:root[data-theme="dark"] .view-all-button {
+    background: #312e55;
+    border-color: var(--border);
+    color: #c4baff;
+}
+
+/* Đường phân cách */
+:root[data-theme="dark"] .sidebar-bottom,
+:root[data-theme="dark"] .recommendation,
+:root[data-theme="dark"] .task,
+:root[data-theme="dark"] .insight-item {
+    border-color: var(--border);
+}
+
+/* Biểu đồ */
+:root[data-theme="dark"] .chart-grid-line {
+    border-color: #374151;
+}
+
+:root[data-theme="dark"] .bar {
+    background: #51468b;
+}
+
+:root[data-theme="dark"] .bar.active-bar,
+:root[data-theme="dark"] .bar:hover {
+    background: var(--primary);
+}
+
+/* Thanh tiến độ */
+:root[data-theme="dark"] .progress-bar,
+:root[data-theme="dark"] .match-bar {
+    background: #374151;
+}
+
+/* Nút giao diện */
+:root[data-theme="dark"] .header-button {
+    color: #facc15;
+}
+
+/* Chuyển màu mượt */
+body,
+.sidebar,
+.top-header,
+.stat-card,
+.dashboard-card,
+.profile-card,
+.auth-card,
+.header-button {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* =========================================
+   GLOBAL SEARCH - AISTUDY
+========================================= */
+
+.search-box {
+    position: relative;
+}
+
+.global-search-results {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: min(520px, calc(100vw - 32px));
+    max-height: 430px;
+    overflow-y: auto;
+    background: #ffffff;
+    border: 1px solid #e8e9f0;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(30, 35, 60, 0.15);
+    z-index: 9999;
+    padding: 8px;
+}
+
+.global-search-results[hidden] {
+    display: none !important;
+}
+
+.search-results-heading {
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #85899a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #252a3a;
+    transition: background 0.2s ease;
+}
+
+.search-result-item:hover {
+    background: #f2f0ff;
+    color: #6655ed;
+}
+
+.search-result-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0edff;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.search-result-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.search-result-content strong {
+    font-size: 13px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-result-content span {
+    font-size: 12px;
+    color: #85899a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-result-item small {
+    font-size: 10px;
+    color: #85899a;
+    white-space: nowrap;
+}
+
+.search-message {
+    padding: 22px 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #85899a;
+}
+
+/* DARK MODE */
+
+[data-theme="dark"] .global-search-results {
+    background: #202333;
+    border-color: #35394d;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .search-result-item {
+    color: #f1f2f8;
+}
+
+[data-theme="dark"] .search-result-item:hover {
+    background: #30304a;
+    color: #b5aaff;
+}
+
+[data-theme="dark"] .search-result-icon {
+    background: #34304e;
+}
+
+[data-theme="dark"] .search-result-content span,
+[data-theme="dark"] .search-result-item small,
+[data-theme="dark"] .search-results-heading,
+[data-theme="dark"] .search-message {
+    color: #a5a9ba;
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+    .global-search-results {
+        width: calc(100vw - 32px);
+        max-height: 65vh;
+    }
+
+    .search-result-item {
+        gap: 9px;
+    }
+
+    .search-result-item small {
+        display: none;
+    }
+}
+
+/* ===== FIX GLOBAL SEARCH DROPDOWN ===== */
+
+.search-box {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+#globalSearchResults.global-search-results {
+    position: absolute !important;
+    top: calc(100% + 12px) !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 520px !important;
+    max-width: calc(100vw - 32px) !important;
+    max-height: 430px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    display: block;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(20, 30, 60, 0.15);
+    z-index: 99999 !important;
+}
+
+.search-results-heading {
+    display: block;
+    padding: 8px 10px;
+    color: #7c8497;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.search-result-item {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    border-radius: 10px;
+    text-decoration: none !important;
+    color: #1f2430 !important;
+    box-sizing: border-box !important;
+}
+
+.search-result-item:hover {
+    background: #f3f1ff;
+}
+
+.search-result-icon {
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eeeaff;
+    font-size: 20px;
+}
+
+.search-result-content {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px;
+}
+
+.search-result-content strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.search-result-content small {
+    display: block;
+    color: #7c8497;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.search-message {
+    display: block;
+    padding: 18px;
+    text-align: center;
+    color: #7c8497;
+    font-size: 14px;
+}
+
+/* Dark mode */
+[data-theme="dark"] #globalSearchResults.global-search-results {
+    background: #202334;
+    border-color: #34384d;
+}
+
+[data-theme="dark"] .search-result-item {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-result-item:hover {
+    background: #30334a;
+}
+
+@media (max-width: 768px) {
+    #globalSearchResults.global-search-results {
+        width: calc(100vw - 32px) !important;
+        max-width: calc(100vw - 32px) !important;
+    }
+
+/* ========================================
+   THANH CUỘN LỊCH HỌC SẮP TỚI
+======================================== */
+
+.schedule-list {
+    max-height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 7px;
+    scrollbar-width: thin;
+    scrollbar-color: #b9adff #f1efff;
+}
+
+.schedule-list::-webkit-scrollbar,
+.recommendation-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.schedule-list::-webkit-scrollbar-track,
+.recommendation-list::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+.schedule-list::-webkit-scrollbar-thumb {
+    background: #b9adff;
+    border-radius: 10px;
+}
+
+/* ========================================
+   KHUNG ĐỀ XUẤT AI CÓ MÀU SẮC
+======================================== */
+
+.dashboard-panel-ai {
+    color: white;
+    border: 0;
+    background: linear-gradient(
+        145deg,
+        #6655ed 0%,
+        #7968f4 55%,
+        #9384ff 100%
+    );
+    box-shadow: 0 10px 25px rgba(103, 87, 245, .16);
+}
+
+.dashboard-panel-ai .panel-title {
+    color: white;
+}
+
+.dashboard-panel-ai .panel-subtitle {
+    color: rgba(255,255,255,.78);
+}
+
+.dashboard-panel-ai .panel-icon {
+    color: white;
+    background: rgba(255,255,255,.18);
+}
+
+.dashboard-panel-ai .panel-link {
+    color: white;
+}
+
+.dashboard-panel-ai .panel-link:hover {
+    color: #eeeaff;
+}
+
+.dashboard-panel-ai .recommendation-list {
+    max-height: 390px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 7px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,.7) rgba(255,255,255,.15);
+}
+
+.dashboard-panel-ai .recommendation-list::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.7);
+    border-radius: 10px;
+}
+
+.dashboard-panel-ai .recommendation-item {
+    margin-bottom: 11px;
+    padding: 13px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 13px;
+    background: rgba(255,255,255,.13);
+}
+
+.dashboard-panel-ai .recommendation-item:last-child {
+    margin-bottom: 0;
+}
+
+.dashboard-panel-ai .recommendation-tag {
+    color: #5545d8;
+    background: #f0edff;
+}
+
+.dashboard-panel-ai .recommendation-title {
+    color: white;
+}
+
+.dashboard-panel-ai .recommendation-description {
+    color: rgba(255,255,255,.85);
+}
+
+.dashboard-panel-ai .recommendation-time {
+    color: #fff2b8;
+}
+
+.dashboard-panel-ai .panel-empty {
+    color: white;
+    border-color: rgba(255,255,255,.35);
+}
+
+/* Nút bắt đầu học ngay */
+
+.ai-start-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 11px;
+    padding: 9px 13px;
+    border-radius: 9px;
+    background: white;
+    color: #6251e8;
+    font-size: 11px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.ai-start-button:hover {
+    color: #4937d5;
+    background: #f0edff;
+    transform: translateY(-2px);
+}
 
 }

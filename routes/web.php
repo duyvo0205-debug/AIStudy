@@ -14,6 +14,8 @@ use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\AIAssistantController;
 use App\Http\Controllers\LearningPathController;
 use App\Http\Controllers\RecommendationController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\NotificationController;
 
 
 /*
@@ -425,5 +427,31 @@ Route::middleware('auth')->group(function () {
         RecommendationController::class,
         'reject',
     ])->name('recommendations.reject');
+    /*
+|--------------------------------------------------------------------------
+| Tìm kiếm toàn website
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/search', [
+    SearchController::class,
+    'index',
+])->name('search.index');
+
+// Thông báo
+Route::prefix('notifications')->name('notifications.')->group(function () {
+    Route::get('/', [NotificationController::class, 'index'])
+        ->name('index');
+
+    Route::patch('/{id}/read', [NotificationController::class, 'markAsRead'])
+        ->name('read');
+
+    Route::patch('/read-all', [NotificationController::class, 'markAllAsRead'])
+        ->name('read-all');
+
+    Route::delete('/{id}', [NotificationController::class, 'destroy'])
+        ->name('destroy');
+});
+
 
 });
