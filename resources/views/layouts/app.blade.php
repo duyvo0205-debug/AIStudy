@@ -70,7 +70,7 @@
                 href="{{ route('dashboard') }}"
                 class="menu-item {{ request()->routeIs('dashboard') ? 'active' : '' }}"
             >
-                <span class="menu-icon">⌂</span>
+                <span class="menu-icon">🏡</span>
                 <span>Tổng quan</span>
             </a>
 
@@ -79,7 +79,7 @@
                 href="{{ route('learning-goals.index') }}"
                 class="menu-item {{ request()->routeIs('learning-goals.*') ? 'active' : '' }}"
             >
-                <span class="menu-icon">◎</span>
+                <span class="menu-icon">🎯</span>
                 <span>Mục tiêu</span>
             </a>
 
@@ -97,7 +97,7 @@
                 href="{{ route('school-schedules.index') }}"
                 class="menu-item {{ request()->routeIs('school-schedules.*') ? 'active' : '' }}"
             >
-                <span class="menu-icon">▦</span>
+                <span class="menu-icon">📆</span>
                 <span>Thời khóa biểu</span>
             </a>
 
@@ -106,7 +106,7 @@
                 href="{{ route('learning.index') }}"
                 class="menu-item {{ request()->routeIs('learning.*') ? 'active' : '' }}"
             >
-                <span class="menu-icon">▣</span>
+                <span class="menu-icon">📖</span>
                 <span>Học tập</span>
             </a>
 
@@ -115,7 +115,7 @@
                 href="{{ route('exercises.index') }}"
                 class="menu-item {{ request()->routeIs('exercises.*') ? 'active' : '' }}"
             >
-                <span class="menu-icon">✓</span>
+                <span class="menu-icon">📚</span>
                 <span>Bài tập</span>
             </a>
 
@@ -167,60 +167,18 @@
 
         </nav>
 
-        <!-- SIDEBAR BOTTOM -->
-        <div class="sidebar-bottom">
+        
+<!-- SIDEBAR BOTTOM -->
+<div class="sidebar-bottom">
 
-            <!-- HỒ SƠ -->
-            <a href="{{ route('profile') }}" class="sidebar-item">
-                <span class="sidebar-icon">👤</span>
-                <span>Hồ sơ cá nhân</span>
-            </a>
+    <!-- HỒ SƠ -->
+    <a href="{{ route('profile') }}" class="sidebar-item">
+        <span class="sidebar-icon">👤</span>
+        <span>Hồ sơ cá nhân</span>
+    </a>
 
-            <!-- CÀI ĐẶT -->
-            <a href="#" class="sidebar-item">
-                <span class="sidebar-icon">⚙️</span>
-                <span>Cài đặt</span>
-            </a>
+</div>
 
-            <!-- USER -->
-            @auth
-                <div class="sidebar-user">
-
-                    <a
-                        href="{{ route('profile') }}"
-                        class="sidebar-user-info"
-                    >
-                        <div class="sidebar-avatar">
-                            {{ strtoupper(substr(Auth::user()->name, 0, 1)) }}
-                        </div>
-
-                        <div class="sidebar-user-text">
-                            <strong>{{ Auth::user()->name }}</strong>
-                            <small>Người học</small>
-                        </div>
-                    </a>
-
-                    <!-- ĐĂNG XUẤT -->
-                    <form
-                        action="{{ route('logout') }}"
-                        method="POST"
-                        class="logout-form"
-                    >
-                        @csrf
-
-                        <button
-                            type="submit"
-                            class="logout-button"
-                            title="Đăng xuất"
-                        >
-                            ↪
-                        </button>
-                    </form>
-
-                </div>
-            @endauth
-
-        </div>
 
     </aside>
 
@@ -303,7 +261,7 @@
             title="Thông báo"
             aria-label="Mở thông báo"
         >
-            ♢
+            🔔
 
             @if($unreadNotificationCount > 0)
                 <span class="notification-dot"></span>
@@ -543,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (theme === 'dark') {
 
-            themeIcon.textContent = '☀';
+            themeIcon.textContent = '☀️';
             themeButton.title = 'Chuyển sang giao diện sáng';
             themeButton.setAttribute(
                 'aria-label',
@@ -552,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         } else {
 
-            themeIcon.textContent = '☾';
+            themeIcon.textContent = '🌜';
             themeButton.title = 'Chuyển sang giao diện tối';
             themeButton.setAttribute(
                 'aria-label',
